@@ -238,4 +238,8 @@ db.product.find({ product_price: 492.0 });
 // 10. Delete the products which product price value are same
 
 //answer
-db.product.delete({ product_price: 36 });
+db.product.aggregate([
+  { $group: { _id: "$product_price", count: { $sum: 1 } } },
+  { $match: { _id: { $ne: null }, count: { $gt: 1 } } },
+  { $project: { product_price: "$_id", _id: 0 } },
+]);
