@@ -238,4 +238,4 @@ db.product.find({ product_price: 492.0 });
 // 10. Delete the products which product price value are same
 
 //answer
-db.product.delete({});
+db.product.delete({ product_price: 36 });
