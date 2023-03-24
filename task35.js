@@ -232,8 +232,8 @@ db.product.find({ product_material: "Soft" });
 // 9.  Find products which contain product color indigo  and product price 492.00
 
 //answer
-db.product.find({ product_color: "indigo" });
-db.product.find({ product_price: 492.0 });
+db.product.find({ product_color: "indigo" }),
+  db.product.find({ product_price: 492.0 });
 
 // 10. Delete the products which product price value are same
 
