@@ -217,7 +217,7 @@ db.product.find({}, { _id: 0, id: 1, product_name: 1, product_material: 1 });
 // 6.  Find the product with a row id of 10
 
 //answer
-db.product.find({ id: "10" });
+db.product.findOne({ id: "10" });
 
 // 7. Find only the product name and product material
 
@@ -232,8 +232,8 @@ db.product.find({ product_material: "Soft" });
 // 9.  Find products which contain product color indigo  and product price 492.00
 
 //answer
-db.product.find({ product_color: "indigo" }),
-  db.product.find({ product_price: 492.0 });
+db.product.find({ product_color: "indigo" });
+db.product.find({ product_price: 492.0 });
 
 // 10. Delete the products which product price value are same
 
