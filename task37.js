@@ -243,3 +243,4 @@ db.product.aggregate([
   { $match: { _id: { $ne: null }, count: { $gt: 1 } } },
   { $project: { product_price: "$_id", _id: 0 } },
 ]);
+db.product.deleteMany();
